@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      :root {
+        --white: #fff;
+        --boxBg: #ccc;
+        --pageBg: #666;
+        --basePadding: 40px;
+        --baseMargin: 20px;
+      }
+      body {
+        background-color: var(--pageBg);
+        text-align: center;
+      }
+      .inner-header {
+        background-color: aqua;
+      }
+      header,
+      footer,
+      #content,
+      aside {
+        padding: var(--basePadding);
+      }
+      main {
+        padding: var(--basePadding);
+        width: 80%;
+        margin: 20px auto;
+        background-color: var(--white);
+        display: grid;
+        grid-gap: var(--basePadding);
+        grid-template-columns: auto auto 280px;
+        grid-template-areas:
+          'header header header'
+          'col1 col1 col2'
+          'footer footer footer';
+      }
+      main > * {
+        background-color: var(--boxBg);
+      }
+      header {
+        grid-area: header;
+      }
+      footer {
+        grid-area: footer;
+      }
+      header,
+      footer,
+      article,
+      aside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .col1,
+      .col2 {
+        min-height: 200px;
+      }
+      .col1 {
+        grid-area: col1;
+      }
+      .col2 {
+        grid-area: col2;
+      }
+
+      .inner-header {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Two Column Grid</h1>
+    <main>
+      <header class="grid-header header-bg">
+        Header
+        <div class="inner-header">
+          <div class="logo"></div>
+          <div class="profile"></div>
+        </div>
+      </header>
+      <article class="col1">col1</article>
+      <aside class="col2">col2</aside>
+      <footer>Footer</footer>
+    </main>
+  </body>
+</html>

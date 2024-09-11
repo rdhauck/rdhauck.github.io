@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightgray;
+      }
+      #main {
+        width: 1440px;
+        background-color: #fff;
+        margin: 0 auto;
+        padding: 1em;
+      }
+      div {
+        min-height: 100px;
+        border: 1px solid lightgray;
+      }
+      .equal-columns {
+        display: flex;
+      }
+      .equal-columns > div {
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="equal-columns">
+        <div>1</div>
+        <div>2</div>
+      </div>
+      <div class="equal-columns">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </body>
+</html>
